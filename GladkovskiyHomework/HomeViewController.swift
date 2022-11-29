@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
-    override func viewDidLoad(){
+public class HomeViewController: UIViewController {
+    public override func viewDidLoad(){
         let label = UILabel()
         label.font = .systemFont(ofSize: 48, weight: .thin)
         label.textColor = .white
