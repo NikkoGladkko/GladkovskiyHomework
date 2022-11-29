@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "GladkovskiyHomework"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "OTUS Homework module for demonstrations"
 
   spec.description  = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/NikkoGladkko/GladkovskiyHomework.git", :tag => "#{spec.version}" }
 
   spec.dependency 'SnapKit'
-  spec.dependency 'OtusHomework', :git => 'https://github.com/NikkoGladkko/OtusHomework.git'
+  spec.dependency 'OtusHomework', :path => 'https://github.com/NikkoGladkko/OtusHomework.git'
 
   spec.source_files  = "GladkovskiyHomework/**/*.{swift,h,m}"
 
