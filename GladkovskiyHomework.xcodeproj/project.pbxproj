@@ -10,6 +10,7 @@
 		AEC7D9F72936782900C54BCD /* GladkovskiyHomework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC7D9F62936782900C54BCD /* GladkovskiyHomework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEC7D9FE2936788200C54BCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC7D9FD2936788200C54BCD /* HomeViewController.swift */; };
 		AEC7DA01293679F800C54BCD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AEC7DA00293679F800C54BCD /* SnapKit */; };
+		AEC7DA0429368D7300C54BCD /* OtusHomework in Frameworks */ = {isa = PBXBuildFile; productRef = AEC7DA0329368D7300C54BCD /* OtusHomework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEC7DA01293679F800C54BCD /* SnapKit in Frameworks */,
+				AEC7DA0429368D7300C54BCD /* OtusHomework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = GladkovskiyHomework;
 			packageProductDependencies = (
 				AEC7DA00293679F800C54BCD /* SnapKit */,
+				AEC7DA0329368D7300C54BCD /* OtusHomework */,
 			);
 			productName = GladkovskiyHomework;
 			productReference = AEC7D9F32936782900C54BCD /* GladkovskiyHomework.framework */;
@@ -116,6 +119,7 @@
 			mainGroup = AEC7D9E92936782900C54BCD;
 			packageReferences = (
 				AEC7D9FF293679F800C54BCD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AEC7DA0229368D7300C54BCD /* XCRemoteSwiftPackageReference "OtusHomework" */,
 			);
 			productRefGroup = AEC7D9F42936782900C54BCD /* Products */;
 			projectDirPath = "";
@@ -361,6 +365,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		AEC7DA0229368D7300C54BCD /* XCRemoteSwiftPackageReference "OtusHomework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NikkoGladkko/OtusHomework.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.11;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -368,6 +380,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AEC7D9FF293679F800C54BCD /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		AEC7DA0329368D7300C54BCD /* OtusHomework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC7DA0229368D7300C54BCD /* XCRemoteSwiftPackageReference "OtusHomework" */;
+			productName = OtusHomework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

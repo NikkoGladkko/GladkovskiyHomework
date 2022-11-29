@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import OtusHomework
 
 public class HomeViewController: UIViewController {
     public override func viewDidLoad(){
@@ -26,5 +27,11 @@ public class HomeViewController: UIViewController {
         }
         
         view.backgroundColor = .orange
+    }
+}
+
+extension HomeViewController: HasOtusHomeworkView {
+    public var squareView: UIView {
+        return view
     }
 }
