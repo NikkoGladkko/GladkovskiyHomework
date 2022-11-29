@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AEC7D9F72936782900C54BCD /* GladkovskiyHomework.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC7D9F62936782900C54BCD /* GladkovskiyHomework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEC7D9FE2936788200C54BCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC7D9FD2936788200C54BCD /* HomeViewController.swift */; };
+		AEC7DA01293679F800C54BCD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AEC7DA00293679F800C54BCD /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AEC7D9F32936782900C54BCD /* GladkovskiyHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GladkovskiyHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC7D9F62936782900C54BCD /* GladkovskiyHomework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GladkovskiyHomework.h; sourceTree = "<group>"; };
+		AEC7D9FD2936788200C54BCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC7DA01293679F800C54BCD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				AEC7D9F62936782900C54BCD /* GladkovskiyHomework.h */,
+				AEC7D9FD2936788200C54BCD /* HomeViewController.swift */,
 			);
 			path = GladkovskiyHomework;
 			sourceTree = "<group>";
@@ -78,6 +83,9 @@
 			dependencies = (
 			);
 			name = GladkovskiyHomework;
+			packageProductDependencies = (
+				AEC7DA00293679F800C54BCD /* SnapKit */,
+			);
 			productName = GladkovskiyHomework;
 			productReference = AEC7D9F32936782900C54BCD /* GladkovskiyHomework.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +101,7 @@
 				TargetAttributes = {
 					AEC7D9F22936782900C54BCD = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -105,6 +114,9 @@
 				Base,
 			);
 			mainGroup = AEC7D9E92936782900C54BCD;
+			packageReferences = (
+				AEC7D9FF293679F800C54BCD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AEC7D9F42936782900C54BCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC7D9FE2936788200C54BCD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +271,7 @@
 		AEC7D9FB2936782900C54BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -267,6 +281,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,15 +291,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nikkogladkko.GladkovskiyHomework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AEC7D9FC2936782900C54BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -294,6 +312,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,9 +322,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nikkogladkko.GladkovskiyHomework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -331,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEC7D9FF293679F800C54BCD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEC7DA00293679F800C54BCD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEC7D9FF293679F800C54BCD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AEC7D9EA2936782900C54BCD /* Project object */;
 }
