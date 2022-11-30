@@ -15,10 +15,12 @@ public final class HomeViewController: UIViewController {
     let profileView = UIImageView()
     
     public override func viewDidLoad(){
+        super.viewDidLoad()
         configureView()
     }
     
     public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         tuneSizes()
     }
 }
