@@ -19,8 +19,8 @@ public final class HomeViewController: UIViewController {
         configureView()
     }
     
-    public override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tuneSizes()
     }
 }
