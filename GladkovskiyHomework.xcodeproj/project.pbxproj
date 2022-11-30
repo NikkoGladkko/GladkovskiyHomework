@@ -11,14 +11,14 @@
 		AEC7D9FE2936788200C54BCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC7D9FD2936788200C54BCD /* HomeViewController.swift */; };
 		AEC7DA01293679F800C54BCD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AEC7DA00293679F800C54BCD /* SnapKit */; };
 		AEC7DA0429368D7300C54BCD /* OtusHomework in Frameworks */ = {isa = PBXBuildFile; productRef = AEC7DA0329368D7300C54BCD /* OtusHomework */; };
-		AEC7DA072937F67400C54BCD /* Nikolay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEC7DA062937F67400C54BCD /* Nikolay.jpg */; };
+		AEC7DA0929380BC400C54BCD /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC7DA0829380BC400C54BCD /* Asset.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AEC7D9F32936782900C54BCD /* GladkovskiyHomework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GladkovskiyHomework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC7D9F62936782900C54BCD /* GladkovskiyHomework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GladkovskiyHomework.h; sourceTree = "<group>"; };
 		AEC7D9FD2936788200C54BCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AEC7DA062937F67400C54BCD /* Nikolay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nikolay.jpg; sourceTree = "<group>"; };
+		AEC7DA0829380BC400C54BCD /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 		AEC7DA052937F61E00C54BCD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AEC7DA062937F67400C54BCD /* Nikolay.jpg */,
+				AEC7DA0829380BC400C54BCD /* Asset.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC7DA072937F67400C54BCD /* Nikolay.jpg in Resources */,
+				AEC7DA0929380BC400C54BCD /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
