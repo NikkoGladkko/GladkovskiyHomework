@@ -28,10 +28,11 @@ private extension HomeViewController {
         let side: CGFloat = 200.0
         
         profileView.snp.makeConstraints { make in
-            make.bottom.equalTo(label.snp.top).offset(-32)
+            make.bottom.equalTo(label.snp.top).offset(-16)
             make.width.equalTo(side)
             make.height.equalTo(side)
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-64)
         }
         
         label.snp.makeConstraints { make in
