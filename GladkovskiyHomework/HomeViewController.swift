@@ -10,15 +10,15 @@ import UIKit
 import SnapKit
 import OtusHomework
 
-final class HomeViewController: UIViewController {
+public final class HomeViewController: UIViewController {
     let label = UILabel()
     let profileView = UIImageView()
     
-    override func viewDidLoad(){
+    public override func viewDidLoad(){
         configureView()
     }
     
-    override func viewDidLayoutSubviews() {
+    public override func viewDidLayoutSubviews() {
         tuneSizes()
     }
 }
