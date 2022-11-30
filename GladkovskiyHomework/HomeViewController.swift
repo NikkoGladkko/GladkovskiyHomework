@@ -18,11 +18,6 @@ public final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureView()
     }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tuneSizes()
-    }
 }
 
 private extension HomeViewController {
@@ -30,10 +25,12 @@ private extension HomeViewController {
         view.addSubview(profileView)
         view.addSubview(label)
         
+        let side: CGFloat = 200.0
+        
         profileView.snp.makeConstraints { make in
             make.bottom.equalTo(label.snp.top).offset(-32)
-            make.width.equalTo(32)
-            make.height.equalTo(32)
+            make.width.equalTo(side)
+            make.height.equalTo(side)
             make.center.equalToSuperview()
         }
         
@@ -53,21 +50,11 @@ private extension HomeViewController {
         let image = UIImage(named: "profileImage", in: currentBundle, with: .none)
         profileView.image = image
         profileView.clipsToBounds = true
-        profileView.layer.borderWidth = 8
+        profileView.layer.borderWidth = 2
         profileView.layer.borderColor = UIColor.white.cgColor
-
-        view.backgroundColor = .orange
-    }
-    
-    func tuneSizes(){
-        let side = view.frame.width - 64
+        
         profileView.layer.cornerRadius = side * 0.5
-        profileView.snp.updateConstraints { make in
-            make.bottom.equalTo(label.snp.top).offset(-32)
-            make.width.equalTo(side)
-            make.height.equalTo(side)
-            make.center.equalToSuperview()
-        }
+        view.backgroundColor = .orange
     }
 }
 
