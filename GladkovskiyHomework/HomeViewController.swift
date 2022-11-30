@@ -10,30 +10,28 @@ import UIKit
 import SnapKit
 import OtusHomework
 
-public class HomeViewController: UIViewController {
-    public override func viewDidLoad(){
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 32, weight: .thin)
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.text = "Николай Гладковский"
-        label.layer.borderWidth = 8
-        label.layer.borderColor = UIColor.white.cgColor
-        
-        let currentBundle = Bundle(for: HomeViewController.self)
-        let image = UIImage(named: "profileImage", in: currentBundle, with: .none)
-        let profileView = UIImageView(image: image)
-        profileView.clipsToBounds = true
-        profileView.layer.cornerRadius = 80
-        
+final class HomeViewController: UIViewController {
+    let label = UILabel()
+    let profileView = UIImageView()
+    
+    override func viewDidLoad(){
+        configureView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        tuneSizes()
+    }
+}
+
+private extension HomeViewController {
+    func configureView(){
         view.addSubview(profileView)
         view.addSubview(label)
         
         profileView.snp.makeConstraints { make in
             make.bottom.equalTo(label.snp.top).offset(-32)
-            make.width.equalTo(160.0)
-            make.height.equalTo(160.0)
+            make.width.equalTo(32)
+            make.height.equalTo(32)
             make.center.equalToSuperview()
         }
         
@@ -42,7 +40,32 @@ public class HomeViewController: UIViewController {
             make.leading.equalToSuperview().offset(32.0)
         }
         
+        label.font = .systemFont(ofSize: 32, weight: .thin)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = "Николай Гладковский"
+        
+        
+        let currentBundle = Bundle(for: HomeViewController.self)
+        let image = UIImage(named: "profileImage", in: currentBundle, with: .none)
+        profileView.image = image
+        profileView.clipsToBounds = true
+        profileView.layer.borderWidth = 8
+        profileView.layer.borderColor = UIColor.white.cgColor
+
         view.backgroundColor = .orange
+    }
+    
+    func tuneSizes(){
+        let side = view.frame.width - 64
+        profileView.layer.cornerRadius = side * 0.5
+        profileView.snp.updateConstraints { make in
+            make.bottom.equalTo(label.snp.top).offset(-32)
+            make.width.equalTo(side)
+            make.height.equalTo(side)
+            make.center.equalToSuperview()
+        }
     }
 }
 
