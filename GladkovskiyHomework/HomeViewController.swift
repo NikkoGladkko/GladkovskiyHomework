@@ -13,6 +13,7 @@ import OtusHomework
 public final class HomeViewController: UIViewController {
     let label = UILabel()
     let profileView = UIImageView()
+    let mainButton = UIButton()
     
     public override func viewDidLoad(){
         super.viewDidLoad()
@@ -24,6 +25,7 @@ private extension HomeViewController {
     func configureView(){
         view.addSubview(profileView)
         view.addSubview(label)
+        view.addSubview(mainButton)
         
         let side: CGFloat = 200.0
         
@@ -33,6 +35,10 @@ private extension HomeViewController {
             make.height.equalTo(side)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-64)
+        }
+        
+        mainButton.snp.makeConstraints { make in
+            make.edges.equalTo(profileView)
         }
         
         label.snp.makeConstraints { make in
@@ -56,6 +62,9 @@ private extension HomeViewController {
         
         profileView.layer.cornerRadius = side * 0.5
         view.backgroundColor = .orange
+        
+        weak var weakSelf = self
+        mainButton.addTarget(weakSelf, action: #selector(mainButtonDidTap), for: .touchUpInside)
     }
 }
 
@@ -69,4 +78,39 @@ extension HomeViewController: HasOtusHomeworkView {
     }
     
 
+}
+
+private extension HomeViewController {
+    @objc func mainButtonDidTap() {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.mediaTypes = ["public.image", "public.movie"]
+        pickerController.sourceType = .camera
+        present(pickerController, animated: true)
+    }
+    
+    func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
+        controller.dismiss(animated: true, completion: nil)
+
+        if let image = image {
+            self.profileView.image = image
+        }
+    }
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate  & UINavigationControllerDelegate {
+    
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.pickerController(picker, didSelect: nil)
+    }
+
+    public func imagePickerController(_ picker: UIImagePickerController,
+                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
+        guard let image = info[.editedImage] as? UIImage else {
+            return self.pickerController(picker, didSelect: nil)
+        }
+        self.pickerController(picker, didSelect: image)
+    }
 }
