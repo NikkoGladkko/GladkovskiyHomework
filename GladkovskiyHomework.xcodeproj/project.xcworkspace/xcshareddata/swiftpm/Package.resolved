@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/NikkoGladkko/OtusHomework.git",
       "state" : {
-        "revision" : "87bab7d94644f545187012a6b619d4bad80928de",
-        "version" : "0.0.12"
+        "revision" : "1ae346db9691a33c28fa8df3a7cc3c215d1c6b59",
+        "version" : "0.0.17"
       }
     },
     {

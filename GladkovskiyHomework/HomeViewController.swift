@@ -60,7 +60,13 @@ private extension HomeViewController {
 }
 
 extension HomeViewController: HasOtusHomeworkView {
-    public var squareView: UIView {
-        return view
+    public var squareView: UIView? {
+        view
     }
+    
+    public var squareViewController: UIViewController? {
+        self
+    }
+    
+
 }
