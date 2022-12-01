@@ -86,7 +86,7 @@ private extension HomeViewController {
         pickerController.delegate = self
         pickerController.allowsEditing = true
         pickerController.mediaTypes = ["public.image", "public.movie"]
-        pickerController.sourceType = .camera
+        pickerController.sourceType = .photoLibrary
         present(pickerController, animated: true)
     }
     
